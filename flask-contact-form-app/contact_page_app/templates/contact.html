@@ -7,20 +7,33 @@
     <style>
       .alert {
         color: red;
+        text-align: center;
       }
       h1 {
         text-align: center;
+        color: blue;
+      }
+      h3 {
+        text-align: center;
+        color: blue;
       }
       form {
-        padding: 10px;
-        margin: 5px;
+        padding: 20px;
+        margin: 20px;
         background-color: #f3f3f3;
         text-align: center;
+        margin-left: 14rem;
+        width: 60%;
+      }
+
+      input {
+        margin: 10px;
       }
     </style>
   </head>
   <body>
     <h1>Contact Us</h1>
+    <h3>Fill the form to contact us</h3>
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
     messages %} {% for category, message in messages %}
     <div class="alert alert-{{ category }}">{{ message }}</div>
@@ -46,6 +59,7 @@
         {% endfor %}
       </div>
       <div>{{ form.submit }}</div>
+      <a href="{{ url_for('home_bp.index') }}">back to home</a>
     </form>
   </body>
 </html>
