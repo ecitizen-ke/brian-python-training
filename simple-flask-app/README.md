@@ -1,0 +1,1 @@
+- making a routes modular without using blueprint concept
