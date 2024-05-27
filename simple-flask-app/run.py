@@ -1,8 +1,10 @@
 from flask import Flask, jsonify
-from app.users import view_users
-from app.index import view_index
-from app.products import view_products
+# from app.users import view_users
+# from app.index import view_index
+# from app.products import view_products
+from bp_app.index import index_bp
 app = Flask(__name__)
+app.register_blueprint(index_bp)
 
 
 # @app.route('/')
@@ -25,9 +27,9 @@ app = Flask(__name__)
 #     return jsonify(dict)
 
 
-view_users(app)
-view_index(app)
-view_products(app)
+# view_users(app)
+# view_index(app)
+# view_products(app)
 
 
 if __name__ == '__main__':
