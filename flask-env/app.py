@@ -20,9 +20,11 @@ def hello_world():
 
 @app.route('/admin')
 def admin():
-    password = input("Enter your password")
+    password = input("Enter your password: ")
     if (password == os.getenv('admin_password')):
         return render_template('admin.html')
+    else:
+        return 'Incorrect password'
 
 
 if __name__ == '__main__':
