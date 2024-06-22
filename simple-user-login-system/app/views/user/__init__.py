@@ -20,10 +20,6 @@ def register():
     user.create(username, password)
     return jsonify({"message": "user registered successfully", "status": 201})
     
-  
-    
-
-
 @user_bp.route("/login", methods=["POST"])
 def login():
     # initialize the user object
@@ -39,4 +35,5 @@ def login():
         return jsonify({"message": "User login successful!", "status": 200})
     else:
         return jsonify({"message": "Wrong login credentials!", "status": 401})
+    
     
