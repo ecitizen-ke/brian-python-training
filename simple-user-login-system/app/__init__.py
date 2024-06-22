@@ -10,5 +10,4 @@ def create_app():
         app.config.from_object("config.TestingConfig")
     else:
         app.config.from_object("config.ProductionConfig")
-   
     return app
