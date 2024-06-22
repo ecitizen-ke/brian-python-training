@@ -1,14 +1,18 @@
 import mysql.connector
 
+from app import create_app
+
+app= create_app()
+
 
 class Connection:
     """This class provides connection to our database"""
 
     def __init__(self):
-        self.host = "localhost"
-        self.db = "login"
-        self.user = "root"
-        self.password = "Tyondo@98"
+        self.host = app.config['HOST']
+        self.db = app.config['DB']
+        self.user = app.config['USER']
+        self.password = app.config['PASSWORD']
 
         # Create a db connection
         self.conn = mysql.connector.connect(

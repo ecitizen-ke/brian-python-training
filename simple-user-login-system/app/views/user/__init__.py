@@ -19,6 +19,9 @@ def register():
 
     user.create(username, password)
     return jsonify({"message": "user registered successfully", "status": 201})
+    
+  
+    
 
 
 @user_bp.route("/login", methods=["POST"])
