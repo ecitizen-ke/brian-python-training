@@ -39,3 +39,4 @@ def login():
         return jsonify({"message": "User login successful!", "status": 200})
     else:
         return jsonify({"message": "Wrong login credentials!", "status": 401})
+    

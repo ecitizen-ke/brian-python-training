@@ -41,3 +41,4 @@ class User:
         self.db.cursor.close()
         # Close connection
         self.db.conn.close()
+        

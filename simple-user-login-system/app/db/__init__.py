@@ -21,3 +21,4 @@ class Connection:
 
         # Create cursor
         self.cursor = self.conn.cursor()
+        
