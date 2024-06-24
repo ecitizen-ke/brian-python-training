@@ -11,7 +11,7 @@ class Connection:
     def __init__(self):
         self.host = app.config['HOST']
         self.db = app.config['DB']
-        self.user = app.config['USER']
+        self.user = app.config['DB_USER'] 
         self.password = app.config['PASSWORD']
 
         # Create a db connection
