@@ -1,6 +1,8 @@
 # hiding internal  implementation
 
 # class that demonstrates lack of encapsulation ( for educational purposes)
+# encapsulation emphasize on bundling and restricting access
+# a mechanism that enables abstraction
 class BadBankAccountWithoutEncapsulation:
     def __init__(self, balance):
         self.balance = balance
@@ -12,17 +14,18 @@ print(account.balance)
 class BankAccount:
     def __init__(self):
         self._balance = 0.0
-    @property
+    @property # This is getter method
     def balance(self):
-        return self._balance    
+        return self._balance  
+
     def deposit(self, amount):
         if amount <=0:
-            raise ValueError (" deposit amount must be positive")
+            raise ValueError ("Deposit amount must be positive")
         self._balance += amount
 
     def withdraw(self, amount):
         if amount <= 0:
-            raise ValueError(" withdraw amount must be positive.")
+            raise ValueError(" Withdraw amount must be positive.")
         if amount >= self._balance:
             raise ValueError(" insufficient funds")
         self._balance -= amount
